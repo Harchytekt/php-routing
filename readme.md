@@ -1,5 +1,9 @@
 # Routing
 
+This repo contains two example of "_native_" PHP routing.  
+- a [simple routing](simple_routing), inspired by [Tania Rascia](https://www.taniarascia.com/the-simplest-php-router/);
+- a [more complex one](complex_routing), inspired by [HelpInCoding](https://helpincoding.com/php-routing-with-parameters/).
+
 ## `.htaccess`
 
 This code sets up a URL rewrite rule in an Apache server's `.htaccess` file.
