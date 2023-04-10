@@ -2,15 +2,17 @@
 
 ## `.htaccess`
 
-This code sets up a URL rewrite rule in an Apache server's `.htaccess` file. The directives are explained below:
+This code sets up a URL rewrite rule in an Apache server's `.htaccess` file.
 
+The directives are explained below:  
+- `DirectoryIndex index.php`: Specifies that if no file is requested, the server should use `index.php` as the default file to load.
 - `RewriteEngine On`: Enables the URL rewriting engine.
 - `RewriteBase /`: Sets the base URL path for all subsequent rewrite rules.
 - `RewriteCond %{REQUEST_FILENAME} !-d`: Specifies a condition that the requested URL is not a directory.
 - `RewriteCond %{REQUEST_FILENAME} !-f`: Specifies a condition that the requested URL is not a file.
 - `RewriteRule ^(.+)$ index.php [QSA,L]`: This is the actual rewrite rule that matches the requested URL and redirects
-  it to the index.php file.
-    - `^(.+)$` matches any character sequence in the URL, while the $ signifies the end of the string.
+  it to the `index.php` file.
+    - `^(.+)$` matches any character sequence in the URL, while the `^` and `$` respectively signify the start and the end of the string.
     - `[QSA]` appends any query string parameters to the rewritten URL.
     - `[L]` specifies that the rewriting process should stop at this rule and no further rules should be processed.
 
